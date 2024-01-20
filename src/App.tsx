@@ -1,31 +1,15 @@
 import React from 'react';
 import './App.css';
-import { ChakraProvider } from '@chakra-ui/react';
-import { Tabs, TabList, TabPanels, Tab, TabPanel } from '@chakra-ui/react';
-
+import { Routes, Route } from 'react-router-dom';
+import { Home } from './page/Home';
 function App() {
   return (
-    <ChakraProvider>
-      <Tabs>
-        <TabList>
-          <Tab>タスク</Tab>
-          <Tab>ルーチン</Tab>
-          <Tab>レビュー</Tab>
-        </TabList>
-
-        <TabPanels>
-          <TabPanel>
-            <p>one!</p>
-          </TabPanel>
-          <TabPanel>
-            <p>two!</p>
-          </TabPanel>
-          <TabPanel>
-            <p>three!</p>
-          </TabPanel>
-        </TabPanels>
-      </Tabs>
-    </ChakraProvider>
+    <div>
+      <h1>TimeLog</h1>
+      <Routes>
+        <Route path="/" element={<Home />} />
+      </Routes>
+    </div>
   );
 }
 

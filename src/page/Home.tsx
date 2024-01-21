@@ -1,5 +1,6 @@
 import React from 'react';
 import { Box, Tabs, TabList, TabPanels, Tab, TabPanel } from '@chakra-ui/react';
+import { Task } from './Task';
 
 export const Home = () => {
   return (
@@ -13,7 +14,7 @@ export const Home = () => {
 
         <TabPanels>
           <TabPanel>
-            <p>one!</p>
+            <Task />
           </TabPanel>
           <TabPanel>
             <p>two!</p>
